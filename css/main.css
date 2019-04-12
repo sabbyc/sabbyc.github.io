@@ -29,15 +29,21 @@ img {
   a:hover {
       color: hotpink;
     }
-    
+
 .portfolio-item {
+  border-radius: 25px;
   margin-top: 60px;
   padding:40px;
   background-color: white;
 }
 
 .statement-item {
+  border-radius: 25px;
   margin-top: 60px;
   padding:40px;
   background-color: white;
+}
+
+.profile-image {
+  align: left;
 }

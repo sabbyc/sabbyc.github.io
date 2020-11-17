@@ -1,30 +1,350 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <title>Main</title>
+  <meta charset="UTF-8">
+  
+      <!-- <script language="javascript" type="text/javascript" src="../lib/p5.clickable.js"></script>
+  <script language="javascript" src="../lib/scenemanager.js"></script>
+  <script language="javascript" src="../lib/p5.sound.js"></script>
+	<script language="javascript" src="../lib/p5.play.js"></script> -->
+
+
+
+  <style>
+
+  body {background-color: #ffc9f9;}
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+  .container {
+    position: relative;
+    width: 50%;
+  }
+
+  .phone {
+    display: block;
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+  }
+
+  .makeup {
+    display: block;
+    width: 190px;
+    height: 140px;
+    position: absolute;
+    left: 490px;
+    top: 50px;
+  }
+
+  .pad {
+    display: block;
+    width: 270px;
+    height: 340px;
+    position: absolute;
+    left: 650px;
+    top: 20px;
+  }
+
+  .three {
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 900px;
+    top: 50px;
+  }
+
+  .cake {
+    display: block;
+    width: 270px;
+    height: 260px;
+    position: absolute;
+    left: 1050px;
+    top: 130px;
+  }
+
+  .razor {
+    display: block;
+    width: 170px;
+    height: 190px;
+    position: absolute;
+    left: 230px;
+    top: 320px;
+  }
+
+  .letter {
+    display: block;
+    width: 240px;
+    height: 190px;
+    position: absolute;
+    left: 440px;
+    top: 310px;
+  }
+
+  .candy {
+    display: block;
+    width: 190px;
+    height: 170px;
+    position: absolute;
+    left: 770px;
+    top: 350px;
+  }
+
+  .camera {
+    display: block;
+    width: 270px;
+    height: 220px;
+    position: absolute;
+    left: 1000px;
+    top: 400px;
+  }
+
+  .knife {
+    display: block;
+    width: 500px;
+    height: 140px;
+    position: absolute;
+    left: 200px;
+    top: 530px;
+  }
+
+  .underwear {
+    display: block;
+    width: 280px;
+    height: 200px;
+    position: absolute;
+    left: 200px;
+    top: 630px;
+  }
+
+  .candles {
+    display: block;
+    width: 210px;
+    height: 185px;
+    position: absolute;
+    left: 510px;
+    top: 640px;
+  }
+
+  .one {
+    display: block;
+    width: 350px;
+    height: 290px;
+    position: absolute;
+    left: 730px;
+    top: 560px;
+  }
+
+  .box {
+    display: block;
+    width: 200px;
+    height: 260px;
+    position: absolute;
+    left: 1100px;
+    top: 640px;
+  }
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 890px;
+    width: 180px;
+    opacity: 0;
+    background-color: rgba(255, 102, 153, 0.6);
+    transition: .5s ease;
+  }
+
+  .overlay2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1320px;
+    height: 890px;
+    width: 180px;
+    opacity: 0;
+    background-color: rgba(255, 102, 153, 0.6);
+    transition: .5s ease;
+  }
+
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .container:hover .overlay2 {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+</style>
 </head>
-
 <body>
-  <h1> <a href="index.html">Sabrina Chan</a></h1>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="statement.html">Artist's statement</a>
-  <a href="contact.html">Contact</a>
 
-  <div class="portfolio-item">
-    <div class="profile-image">
-      <img src="images/spidr_pfp.png" width="250"></div>
-    <div class="profile-text">
-      <p>Sabrina Chan was born in Berkeley, California in 1999. She currently attends San Jose State University in San Jose, California and is working towards receiving her BFA in Digital Media Art. While she places most of her focus and energy into
-        her studies, she also takes commissions on the side for various individuals. She offers sketches and colored illustrations. Chan has always been curious about learning how technology and human interaction go hand in hand and would like to
-        gain more experience in UI and UX design.</p>
+  <div class="container">
+    <img src="assets/two.png" alt="Avatar" class="phone">
+    <div class="overlay">
+      <div class="text">If a child is being or has been sexually abused online, they might:
 
+spend a lot more or a lot less time than usual online, texting, gaming or using social media
+seem distant, upset or angry after using the internet or texting
+be secretive about who they're talking to and what they're doing online or on their mobile phone
+have lots of new phone numbers, texts or email addresses on their mobile phone, laptop or tablet.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/makeup.png" alt="Avatar" class="makeup">
+    <div class="overlay">
+      <div class="text">Children almost never make up stories about being sexually abused. In fact victims are often revictimized in multiple ways for truthfully asserting they have been sexually abused. Perpetrators usually deny their abusive behavior. Mothers may also have reasons for not acknowledging the sexual abuse.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/pad.png" alt="Avatar" class="pad">
+    <div class="overlay2">
+      <div class="text">My stepfather was loud and aggressive and our house was overcrowded; this made his cruel behaviour even more unbearable, and it felt impossible to escape from. Also living with us was my step father's sister and husband; he was the first person to sexually abuse me.I still remember flashes of it to this day. At age five, my step uncle took me to the bedroom and assaulted me. There was blood on the bed, and I remember hearing so much shouting.My stepfather called the doctor, but before he arrived, my mother made sure I washed the blood away. It felt like she wanted me to get rid of any trace of what had happened.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/three.png" alt="Avatar" class="three">
+    <div class="overlay2">
+      <div class="text">she was dressed up “like a whore” and was
+
+ordered to act as a prostitute. She was ordered to hug and kiss the men. The scene was set up and photos taken by her torturers. These photos were spread around [the region], even in the village where Mukinem had been born. The message from the photos was clear: Look at the Prostitute! After that torture, I started continually menstruating for four months, it wouldn't stop. The eighty men who were detained with me started making sanitary pads made out of their clothes and socks and giving them to me</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/cake.png" alt="Avatar" class="cake">
+    <div class="overlay2">
+      <div class="text">As a kid I both loved and hated birthdays. I looked forward to them as a day of cease-fire. Everyone was nice. It was as if someone had pressed pause on our regular life and we magically became a different family for the day.Walking on eggshells to make sure nothing could possibly set my father off.But throughout my birthday, despite, or perhaps because of, everyone’s overt niceness, I could never quite shake the fearful, uneasy feeling gnawing at me. A sinking feeling of dread that the day would soon be over; the magical world would shatter and everyone would be back to normal.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/razor.png" alt="Avatar" class="razor">
+    <div class="overlay">
+      <div class="text">He would lift up my shirt. He would also check my va-jayjay and make sure I shaved really good, and he would touch it. He was just making sure I shaved so he was just rubbing to
+see if it felt soft.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/letter.png" alt="Avatar" class="letter">
+    <div class="overlay">
+      <div class="text">All alone I sit and cry
+I wonder why I can't just let myself die
+
+I lay on my bed
+Covering my head
+
+The marks he leaves are red
+But inside I'm already dead
+
+I hope tonight he just falls asleep
+So here in silence I may weep
+Every day I clean and clean
+But he gets more and more mean
+
+He comes to my room
+And I feel I'm doomed
+
+I wish I could run
+Run from what he calls "fun"
+
+But the torture has just begun
+Sometimes I wish I had his gun
+
+I wish I could be alone
+Or just run from home
+
+But home is all I've ever known
+I can never be alone...
+
+He is always there
+Ready to tear
+
+And I'm always here
+Full of tears......
+
+</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/candy.png" alt="Avatar" class="candy">
+    <div class="overlay2">
+      <div class="text">I was trafficked to Wrexham, Cornwall, Plymouth and London and forced to perform sex acts on men there. It wasn't quite a pedophile ring, More an affiliation of abusers who all knew each other. One man would give sweets or cigarettes to children who masturbated him.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/camera.png" alt="Avatar" class="camera">
+    <div class="overlay2">
+      <div class="text">My father drugged my sodas every night and then unclothed me while I was asleep, touched me and took photos of me. Then later on he would trade them online. He would tape me in the shower without me knowing, would be very “overly friendly” with me, gave me wedgies ALL the time, and tickled me to the point where I cried because it hurt. My father is a sick man and because of his actions he is now spending 50 stacked years in prison. I never will be able to trust my future kids alone with him… and that just tears me up inside.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/knife.png" alt="Avatar" class="knife">
+    <div class="overlay">
+      <div class="text">During my pregnancy he abused me again and again. Another time I pulled a kitchen knife on him and he laughed, as he knew I would not use it, then he spat in my face. There were times when he was at the hotel with his parents, I would pray that someone would knock on my door and tell me he was dead, rather than face him coming home. I was trapped; the only people I knew were his family. I had no way out.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/underwear.png" alt="Avatar" class="underwear">
+    <div class="overlay">
+      <div class="text">Gramps put his thingy in my thingy.
+He did my sister too. It hurted and bleeded. </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/candles.png" alt="Avatar" class="candles">
+    <div class="overlay">
+      <div class="text">I was repeatedly molested and raped by my father ever since I could remember. The first time I ever remember him molesting me was when I was 5 years old and we were in the bath and he was cleaning me and he touched my vagina, and then asked me to touch his penis. He would even sneak in my room at night and wake me up to make me sexually interact with him. On my tenth birthday he raped me for the first time, and continued to until I was 12.</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/one.png" alt="Avatar" class="one">
+    <div class="overlay2">
+      <div class="text">When I was 5, my mom got married to this guy. He was cool until one day my mom finally got a job.  He grabbed me by the arm and told me to sit on the couch. I thought I had done something wrong but it turns out my body was in trouble . He made me lay down on the couch and used his fingers first then moved from there. He told me not to tell anyone or he would do it harder next time. This continued until I was 8. I ended up telling my aunt and she called my mom at work. I told her what had been happening to me. </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="assets/box.png" alt="Avatar" class="box">
+    <div class="overlay2">
+      <div class="text"> 1 in 3 girls and 1 in 5 boys will become a victim of child sexual abuse before their 18th birthday.</div>
     </div>
   </div>
 
 
 </body>
-
 </html>
